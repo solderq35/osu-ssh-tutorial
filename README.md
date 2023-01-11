@@ -47,8 +47,6 @@ Select the server, I think it also asks for platform (say linux), and you're in
 
 More documentation:  https://code.visualstudio.com/docs/remote/ssh
 
-You might have to set another identityfile for the os2 part if you have a different key for it btw.
-
 ### Git
 
 If you have ssh keys for Git (highly recommended) make sure to add the ssh keys (public and private pair) you use for Git to your remote school directory (`<onid>/.ssh`). If in doubt, copy over all ssh keys to your school directory.
