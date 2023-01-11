@@ -29,6 +29,8 @@ os2 or os1 etc is optional and only if you are taking that class, you normally c
 
 IdentifyFile should be the ssh key you created earlier (if you changed the key's name from the default, make sure you put the right key).
 
+You might need IdentityFile for os2 as well if you used a different key for this.
+
 ### Authorized_keys
 In your remote school directory (`<onid>/.ssh`), add a file called `authorized_keys`. Copy and paste all your **public** keys here as plain text (not private keys). **Your ssh will not work properly if you skip this**
 
