@@ -26,6 +26,8 @@ You will be asked to create a passphrase when generating the SSH key. You can ju
 
 The main thing is to make sure you have saved your SSH keys locally before moving on.
 
+At this point, if you are on MacOS or Linux, it may also be a good idea to run `umask 077 && chmod 700 ~/.ssh/*` to make all files in the .ssh folder have the required permissions. The `umask` command should also ensure that any future files added to the `.ssh` directory inherit the 700 permissions.
+
 ### Helpful Prerequisites for File Transfer
 These aren't strictly necessary but they could help out with copy and pasting files from local to remote and whatnot, for the some of the SSH instructions below. 
 
