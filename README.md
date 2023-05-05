@@ -26,8 +26,6 @@ You will be asked to create a passphrase when generating the SSH key. You can ju
 
 The main thing is to make sure you have saved your SSH keys locally before moving on.
 
-At this point, if you are on MacOS or Linux, it may also be a good idea to run `umask 077 && chmod 700 ~/.ssh/*` to make all files in the .ssh folder have the required permissions. The `umask` command should also ensure that any future files added to the `.ssh` directory inherit the 700 permissions.
-
 ### Helpful Prerequisites for File Transfer
 These aren't strictly necessary but they could help out with copy and pasting files from local to remote and whatnot, for the some of the SSH instructions below. 
 
@@ -90,6 +88,14 @@ Also, you can set up a config file on the remote school servers too (`~/.ssh/con
 
 More documentation for SSH config: https://www.ssh.com/academy/ssh/config
 More documentation for ProxyJump: https://www.redhat.com/sysadmin/ssh-proxy-bastion-proxyjump
+
+#### chmod 600
+You may also need to restrict read / write permissions on the SSH config file if you are on Linux or MacOS.
+
+You can do this by running `chmod 600 ~/.ssh/config`
+
+- [More Info on SSH Config Required Permissions](https://man.archlinux.org/man/core/openssh/ssh.1.en#FILES)
+- [More Info on chmod 600](https://chmodcommand.com/chmod-600/) (read / write for user only)
 
 ### Authorized_keys
 In your SSH directory on the school's remote server (`~/.ssh` on the remote server), add a file called `authorized_keys`. Copy and paste all your **public** keys (i.e. `id_ed25519.pub`) from your local machine **as plain text** into the `authorized_keys` file on the remote server. Leave a blank line between each public key. **Your ssh will not work properly if you skip this.** 
