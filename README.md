@@ -53,7 +53,7 @@ You can do the following steps before you set up any SSH keys, just login with p
   - Example (local > flip1): `scp %HOMEPATH%/.ssh/id_ed25519.pub huangjef@flip1.engr.oregonstate.edu:.ssh`
   - Example (flip1 > local): `scp huangjef@flip1.engr.oregonstate.edu:.ssh/id_ed25519.pub %HOMEPATH%/.ssh`
 
-  - ![Example of what your output here should look like](https://i.ibb.co/Q6xWn7p/ssh1.png) 
+  - ![Example of what your output here should look like](https://i.ibb.co/Q6xWn7p/ssh1.PNG) 
     - If you haven't finished setting up SSH keys yet you might get prompted to login with password and dual auth
 
 ### Config / Proxyjump
@@ -100,7 +100,7 @@ You can do this by running `chmod 600 ~/.ssh/config`
 ### Authorized_keys
 In your SSH directory on the school's remote server (`~/.ssh` on the remote server), add a file called `authorized_keys`. Copy and paste all your **public** keys (i.e. `id_ed25519.pub`) from your local machine **as plain text** into the `authorized_keys` file on the remote server. Leave a blank line between each public key. **Your ssh will not work properly if you skip this.** 
 
-- [Example of what authorized_keys should look like](https://i.ibb.co/fCDVjzS/ssh2.png)(public key details scrubbed for privacy)
+- [Example of what authorized_keys should look like](https://i.ibb.co/fCDVjzS/ssh2.png) (public key details scrubbed for privacy)
 
 - You can upload local SSH keys to ENGR servers with SCP as explained above, e.g. `scp "%HOMEPATH%/.ssh/id_ed25519.pub" $ONID@flip1.engr.oregonstate.edu:.ssh` (substitute `~` for `%HOMEPATH%` if your local computer is Linux or MacOS).
 
