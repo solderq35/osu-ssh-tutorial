@@ -53,7 +53,7 @@ You can do the following steps before you set up any SSH keys, just login with p
   - Example (local > flip1): `scp %HOMEPATH%/.ssh/id_ed25519.pub huangjef@flip1.engr.oregonstate.edu:.ssh`
   - Example (flip1 > local): `scp huangjef@flip1.engr.oregonstate.edu:.ssh/id_ed25519.pub %HOMEPATH%/.ssh`
 
-  - ![Example of what your output here should look like](https://media.discordapp.net/attachments/1018323831468851202/1063551465072902175/image.png?width=1440&height=490) 
+  - ![Example of what your output here should look like](https://i.ibb.co/Q6xWn7p/ssh1.png) 
     - If you haven't finished setting up SSH keys yet you might get prompted to login with password and dual auth
 
 ### Config / Proxyjump
@@ -100,7 +100,7 @@ You can do this by running `chmod 600 ~/.ssh/config`
 ### Authorized_keys
 In your SSH directory on the school's remote server (`~/.ssh` on the remote server), add a file called `authorized_keys`. Copy and paste all your **public** keys (i.e. `id_ed25519.pub`) from your local machine **as plain text** into the `authorized_keys` file on the remote server. Leave a blank line between each public key. **Your ssh will not work properly if you skip this.** 
 
-- [Example of what authorized_keys should look like](https://media.discordapp.net/attachments/1018323831468851202/1063548672312352829/image.png)(public key details scrubbed for privacy)
+- [Example of what authorized_keys should look like](https://i.ibb.co/fCDVjzS/ssh2.png)(public key details scrubbed for privacy)
 
 - You can upload local SSH keys to ENGR servers with SCP as explained above, e.g. `scp "%HOMEPATH%/.ssh/id_ed25519.pub" $ONID@flip1.engr.oregonstate.edu:.ssh` (substitute `~` for `%HOMEPATH%` if your local computer is Linux or MacOS).
 
@@ -110,7 +110,7 @@ With the config set up, you can SSH from local terminal by just typing out `ssh 
 ### VSCode Integration
 
 In VScode (hit `Extensions` in left tab). Search for `Remote Development` extension pack. 
-- ![Screenshot of the extension](https://media.discordapp.net/attachments/1018323831468851202/1063553501592039514/image.png)
+- ![Screenshot of the extension](https://i.ibb.co/BPjKcMb/ssh3.png)
 
 Install them. Then go to `View` > `Command Palette` > `Remote-SSH: Open SSH Configuration File`. 
 
