@@ -53,7 +53,7 @@ You can do the following steps before you set up any SSH keys, just login with p
   - Example (local > flip1): `scp %HOMEPATH%/.ssh/id_ed25519.pub huangjef@flip1.engr.oregonstate.edu:.ssh`
   - Example (flip1 > local): `scp huangjef@flip1.engr.oregonstate.edu:.ssh/id_ed25519.pub %HOMEPATH%/.ssh`
 
-  - ![Example of what your output here should look like](https://i.ibb.co/Q6xWn7p/ssh1.PNG) 
+  - ![Example of what your output here should look like](https://i.ibb.co/Q6xWn7p/ssh1.png) 
     - If you haven't finished setting up SSH keys yet you might get prompted to login with password and dual auth
 
 ### Config / Proxyjump
